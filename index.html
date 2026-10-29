@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>日本銀行旧小樽支店｜北のウォール街に残る赤レンガの金融資料館</title>
+<meta name="description" content="1912年竣工、辰野金吾らが設計した小樽の歴史的銀行建築。入場無料、1億円の重さ体験もできる日本銀行旧小樽支店（金融資料館）。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2620; --green:#233229; --brick:#7c3226; --brass:#b3905a; --brass-d:#8a6a3a;
+  --stone:#e4dccb; --paper:#f1ebde; --text:#2b2a26; --muted:#6b665b;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--serif);color:var(--text);background:var(--paper);line-height:1.95;font-size:16px;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{width:min(100% - 40px,960px);margin-inline:auto}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#f4ecdb;background:var(--ink) url(images/1.jpg) center/cover no-repeat;padding-top:env(safe-area-inset-top,0)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,28,23,.35) 0%,rgba(20,28,23,.15) 35%,rgba(20,28,23,.88) 100%)}
+.hero .wrap{position:relative;padding:0 0 56px}
+.est{font-size:.85rem;letter-spacing:.2em;color:var(--brass);border-top:1px solid var(--brass);display:inline-block;padding-top:10px;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.3rem,9.5vw,4.6rem);line-height:1.25;letter-spacing:.06em}
+.lead{margin-top:18px;font-size:clamp(.98rem,3.6vw,1.15rem);max-width:30em;color:#e6dcc7}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;list-style:none}
+.facts li{border:1px solid rgba(179,144,90,.7);padding:6px 14px;font-size:.88rem;background:rgba(20,28,23,.45)}
+
+/* sections */
+section{padding:84px 0}
+h2{font-weight:800;font-size:clamp(1.6rem,6vw,2.3rem);letter-spacing:.08em;line-height:1.5;margin-bottom:28px}
+h2::after{content:"";display:block;width:56px;height:2px;background:var(--brass);margin-top:16px}
+p+p{margin-top:1.2em}
+.history{background:var(--paper)}
+.history p{max-width:40em}
+.timeline{margin-top:40px;border-left:2px solid var(--brass);padding-left:22px;list-style:none}
+.timeline li{position:relative;margin-bottom:18px}
+.timeline li::before{content:"";position:absolute;left:-29px;top:.75em;width:10px;height:10px;background:var(--brick);transform:rotate(45deg)}
+.timeline b{color:var(--brick);font-weight:800;margin-right:.6em}
+
+.sights{background:var(--green);color:#efe7d4}
+.sights h2{color:#f4ecdb}
+.sight{display:grid;gap:22px;margin-top:44px}
+.sight img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--brass);padding:6px;background:rgba(255,255,255,.04)}
+.sight h3{font-size:1.3rem;letter-spacing:.06em;color:var(--brass);margin-bottom:8px;line-height:1.6}
+.strength{margin-top:48px;border-top:1px solid rgba(179,144,90,.5);padding-top:28px;color:#d9cfb9}
+
+.voices{background:var(--stone)}
+.voice{background:var(--paper);border-left:4px solid var(--brick);padding:22px 22px 20px;margin-top:20px}
+.stars{color:var(--brass-d);letter-spacing:.2em;font-size:1.05rem}
+.voice p{margin-top:.6em}
+
+.info{background:var(--paper)}
+dl{border-top:1px solid #c9bea5}
+dl div{display:grid;gap:2px;padding:16px 0;border-bottom:1px solid #c9bea5}
+dt{font-weight:800;color:var(--brick);font-size:.92rem;letter-spacing:.1em}
+dd{overflow-wrap:anywhere}
+dd a{color:var(--brick);text-underline-offset:3px}
+
+.access{background:var(--ink);color:#efe7d4}
+.access h2{color:#f4ecdb}
+.map{border:1px solid var(--brass);padding:6px;background:rgba(255,255,255,.05)}
+.map iframe{display:block;width:100%;height:340px;border:0}
+.btn{display:block;margin-top:18px;text-align:center;text-decoration:none;background:var(--brass);color:#1c1a14;font-weight:800;letter-spacing:.12em;padding:16px 20px;min-height:52px;border:1px solid var(--brass)}
+.btn:hover{background:#c7a56d}
+footer{background:#121a15;color:#9a937f;text-align:center;font-size:.8rem;padding:26px 20px calc(26px + env(safe-area-inset-bottom,0))}
+
+@media(min-width:760px){
+  body{font-size:17px}
+  section{padding:120px 0}
+  .sight{grid-template-columns:1.1fr 1fr;align-items:center;gap:48px}
+  .sight.rev img{order:2}
+  dl div{grid-template-columns:200px 1fr;gap:24px}
+  .map iframe{height:440px}
+  .btn{max-width:420px;margin-inline:auto}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="est">1912年竣工 ・ 入場無料</p>
+    <h1>日本銀行<br>旧小樽支店</h1>
+    <p class="lead">「北のウォール街」の面影を残す、赤レンガと尖塔の銀行建築。重厚な吹き抜けの営業場で、小樽が金融都市として栄えた時代にふれる。</p>
+    <ul class="facts">
+      <li>小樽市指定有形文化財</li>
+      <li>設計：辰野金吾ほか</li>
+      <li>1億円の重さ体験</li>
+    </ul>
+  </div>
+</header>
+
+<section class="history" id="history">
+  <div class="wrap">
+    <h2>北のウォール街の歴史</h2>
+    <p>北海道における金融取引の促進を目的に、1893年、日本銀行の小樽派出所が開設されました。小樽の経済発展とともに役割を広げ、1897年に出張所、1906年には支店へと昇格します。</p>
+    <p>現在の建物は、東京駅の設計者としても知られる辰野金吾をはじめ、長野宇平治、岡田信一郎らが設計を担当し、1912年7月に竣工。赤レンガ造りの外観の四隅に尖塔を配し、鉄骨構造の小屋組みやモルタルなど、当時の最新技術で建てられました。</p>
+    <p>2002年に支店業務は札幌支店へ移管されて廃止。2003年からは日本銀行の広報施設「金融資料館」として再利用され、小樽市指定有形文化財にも登録されています。</p>
+    <ol class="timeline">
+      <li><b>1893</b>小樽派出所を開設</li>
+      <li><b>1906</b>支店に昇格</li>
+      <li><b>1912</b>現在の建物が竣工</li>
+      <li><b>2003</b>金融資料館として再出発</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sights" id="sights">
+  <div class="wrap">
+    <h2>見どころ</h2>
+    <div class="sight">
+      <img src="images/2.jpg" alt="銀行営業当時の面影を残す、重厚な吹き抜けの営業場と大理石のカウンター" width="800" height="600" loading="lazy">
+      <div>
+        <h3>吹き抜けの営業場とロビー</h3>
+        <p>銀行営業当時そのままの、天井の高い営業場とロビー。岐阜県赤坂産の大理石を使ったカウンターや、シマフクロウ像など、細部まで精緻な意匠が見どころです。</p>
+      </div>
+    </div>
+    <div class="sight rev">
+      <img src="images/3.jpg" alt="1億円の現金の重さを体験できる展示コーナー" width="800" height="600" loading="lazy">
+      <div>
+        <h3>「1億円の重さ体験」</h3>
+        <p>1億円の現金を実際に持ち上げられる参加型の展示。小樽の金融史を分かりやすく紹介する展示とあわせて、見て、触れて学べます。</p>
+      </div>
+    </div>
+    <p class="strength">歴史的価値の高い近代建築であることに加え、展示内容の充実が強みです。金融街として発展した小樽の歴史文化を学べる貴重な拠点として、観光客にも市民にも親しまれています。</p>
+  </div>
+</section>
+
+<section class="voices" id="voices">
+  <div class="wrap">
+    <h2>来館者の声</h2>
+    <figure class="voice">
+      <div class="stars" aria-label="5点満点中4点">★★★★<span style="opacity:.3">★</span></div>
+      <p>2025.6月<br>無料です。たいして面白くないだろうと期待しないで行ったけど、一億円の実際の重さや、裁断されたお札、新札の細部まで見られるレンズ等があって結構面白かった。館内は冷房が効いているから大勢のインバウンドの人が見ないのに館内で騒いでた。凄くうるさくて迷惑。</p>
+    </figure>
+    <figure class="voice">
+      <div class="stars" aria-label="5点満点中5点">★★★★★</div>
+      <p>小樽といえば運河が有名ですが、金融都市として栄えた歴史を知るなら日銀小樽支店は外せません。建築の美しさも必見で、写真映えもします。入場無料なので気軽に立ち寄れるのも嬉しいポイント。小樽観光をより深く楽しめるスポットです。</p>
+    </figure>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <div class="wrap">
+    <h2>施設情報</h2>
+    <dl>
+      <div><dt>施設名</dt><dd>日本銀行旧小樽支店（金融資料館）</dd></div>
+      <div><dt>住所</dt><dd>北海道小樽市色内1-11-16</dd></div>
+      <div><dt>電話番号</dt><dd><a href="tel:0134211111">0134-21-1111</a></dd></div>
+      <div><dt>定休日</dt><dd>水曜日（水曜が祝休日の場合は開館）<br>年末年始（12月29日〜1月5日）</dd></div>
+      <div><dt>入館料</dt><dd>無料</dd></div>
+      <div><dt>公式サイト</dt><dd><a href="https://www3.boj.or.jp/otaru-m/" target="_blank" rel="noopener">https://www3.boj.or.jp/otaru-m/</a></dd></div>
+      <div><dt>メール</dt><dd><a href="mailto:sapporo@boj.or.jp">sapporo@boj.or.jp</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="wrap">
+    <h2>アクセス</h2>
+    <div class="map">
+      <iframe title="日本銀行旧小樽支店の地図" src="https://www.google.com/maps?q=%E5%8C%97%E6%B5%B7%E9%81%93%E5%B0%8F%E6%A8%BD%E5%B8%82%E8%89%B2%E5%86%851-11-16%20%E6%97%A5%E6%9C%AC%E9%8A%80%E8%A1%8C%E6%97%A7%E5%B0%8F%E6%A8%BD%E6%94%AF%E5%BA%97&hl=ja&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E6%9C%AC%E9%8A%80%E8%A1%8C%E6%97%A7%E5%B0%8F%E6%A8%BD%E6%94%AF%E5%BA%97%20%E5%8C%97%E6%B5%B7%E9%81%93%E5%B0%8F%E6%A8%BD%E5%B8%82%E8%89%B2%E5%86%851-11-16" target="_blank" rel="noopener">Googleマップで地図を開く</a>
+  </div>
+</section>
+
+<footer>© 日本銀行旧小樽支店 紹介ページ</footer>
+</body>
+</html>
